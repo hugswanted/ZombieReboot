@@ -54,7 +54,7 @@ public class MeleeEnemy : MonoBehaviour
             if (other.gameObject.tag == "Hitbox")
             {
                 enemyHealth -= 1;
-                if (enemyHealth == 0)
+                if (enemyHealth <= 0)
                 {
                     Destroy(this.gameObject);
                 }
