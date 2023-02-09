@@ -1786,7 +1786,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2059324099
+--- !u!114 &2059324095
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1795,9 +1795,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2059324089}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59c734b22c20f482d839f79628d67889, type: 3}
+  m_Script: {fileID: 11500000, guid: f44cbd4ca0f904639ad84a893db0603e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 3
+  jumpHeight: {x: 20, y: 0}
+  maxHealth: 5
+  timeInvincible: 2
 --- !u!1 &2109128714
 GameObject:
   m_ObjectHideFlags: 0
@@ -2203,15 +2207,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8932620886004838891, guid: 575e69bf0355d4620a0528cd45079ed6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0077
+      value: 0.97525203
+      objectReference: {fileID: 0}
+    - target: {fileID: 8932620886004838891, guid: 575e69bf0355d4620a0528cd45079ed6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0254
       objectReference: {fileID: 0}
     - target: {fileID: 8932620886004838891, guid: 575e69bf0355d4620a0528cd45079ed6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.82
+      value: -2.91
       objectReference: {fileID: 0}
     - target: {fileID: 8932620886004838891, guid: 575e69bf0355d4620a0528cd45079ed6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.67
+      value: -2.02
       objectReference: {fileID: 0}
     - target: {fileID: 8932620886004838891, guid: 575e69bf0355d4620a0528cd45079ed6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2254,6 +2262,10 @@ PrefabInstance:
       value: 2.0854716
       objectReference: {fileID: 0}
     - target: {fileID: 8932620886004838892, guid: 575e69bf0355d4620a0528cd45079ed6, type: 3}
+      propertyPath: m_Density
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8932620886004838892, guid: 575e69bf0355d4620a0528cd45079ed6, type: 3}
       propertyPath: m_Offset.x
       value: -0.48191088
       objectReference: {fileID: 0}
@@ -2266,6 +2278,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8932620886004838893, guid: 575e69bf0355d4620a0528cd45079ed6, type: 3}
+      propertyPath: m_Mass
+      value: 2.6982694
+      objectReference: {fileID: 0}
+    - target: {fileID: 8932620886004838893, guid: 575e69bf0355d4620a0528cd45079ed6, type: 3}
       propertyPath: m_Simulated
       value: 1
       objectReference: {fileID: 0}
@@ -2275,7 +2291,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8932620886004838893, guid: 575e69bf0355d4620a0528cd45079ed6, type: 3}
       propertyPath: m_UseAutoMass
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8932620886004838894, guid: 575e69bf0355d4620a0528cd45079ed6, type: 3}
       propertyPath: m_Name
@@ -2287,8 +2303,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8932620886004838895, guid: 575e69bf0355d4620a0528cd45079ed6, type: 3}
       propertyPath: playerSpeed.x
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8932620886004838895, guid: 575e69bf0355d4620a0528cd45079ed6, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 575e69bf0355d4620a0528cd45079ed6, type: 3}

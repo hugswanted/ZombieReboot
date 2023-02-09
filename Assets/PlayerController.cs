@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     int allyHealth = 1;
     int jumpCount = 0;
     int jumpMax = 2;
+    int state = 0;
     public Vector2 playerSpeed;  //allows us to be able to change speed in Unity
     float speed = 20;
     float jumpHeight = 5;
@@ -41,21 +42,34 @@ void Update()
         {
             position.x = position.x + speed * 1 * Time.deltaTime;  //makes player run Right 
             playerRb.MovePosition(position);
-            m_Animator.SetTrigger("Run");
+            state = state += 1;
         }
 
     if (leftArrow)
         {
             position.x = position.x + speed * -1 * Time.deltaTime;  //makes player run left
             playerRb.MovePosition(position);
-            m_Animator.SetTrigger("Run");
-            Debug.Log("sprint");
+            state = state -= 1;
         }
 
-    if (!rightArrow & !leftArrow)
+    if (Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            state += 1;
+        }
+
+        if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            state -= 1;
+        }
+
+        if (state != 0)
+        {
+            m_Animator.SetTrigger("Run");
+        }
+        if (state == 0)
         {
             m_Animator.ResetTrigger("Run");
-            Debug.Log("idle");
+            Debug.Log(state + "State");
         }
 }
 
@@ -99,7 +113,7 @@ void Update()
     //     {
     //         position.x = position.x + speed * -1 * Time.deltaTime;  //makes player run left
     //         playerRb.MovePosition(position);
-    //         m_Animator.SetFloat("Speed",speed);
+    //         m_Animator.SetTrigger("Run")
     //     }
 
     //     if ( !leftArrow && !rightArrow)

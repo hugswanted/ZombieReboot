@@ -44,6 +44,9 @@
      <Compile Include="Assets/Playeranimation.cs" />
      <Compile Include="Assets/PlayerController.cs" />
      <Compile Include="Assets/Wagon.cs" />
+     <Compile Include="Assets/anim.cs" />
+     <Compile Include="Assets/animationscrpt.cs" />
+     <Compile Include="Assets/knightcontroller.cs" />
      <None Include="Assets/Warrior free set/License.txt" />
      <None Include="Assets/UCSpriteSheetPacker/Simple/readme.txt" />
      <None Include="Assets/Warrior free set/Contact.txt" />
