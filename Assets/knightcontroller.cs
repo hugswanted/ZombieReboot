@@ -55,6 +55,16 @@ public class knightcontroller : MonoBehaviour
             if (invincibleTimer < 0)
                 isInvincible = false;
         }
+
+
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))  //makes player jump
+        {
+            Debug.Log("Jump");
+            rigidbody2d.AddForce(Vector2.up * 25000, ForceMode2D.Impulse);
+            rigidbody2d.MovePosition(rigidbody2d.position);
+        }
+
+       
     }
     
     void FixedUpdate()
@@ -65,10 +75,7 @@ public class knightcontroller : MonoBehaviour
 
         rigidbody2d.MovePosition(position);
         
-         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))  //makes player jump
-    {
-        GetComponent<Rigidbody2D>().AddForce(jumpHeight, ForceMode2D.Impulse);
-    }
+         
     }
     
 }

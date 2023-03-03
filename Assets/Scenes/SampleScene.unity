@@ -1795,13 +1795,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2059324089}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f44cbd4ca0f904639ad84a893db0603e, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b3886762071344c6ba52075c14187ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  jumpHeight: {x: 20, y: 0}
-  maxHealth: 5
-  timeInvincible: 2
+  speed: 10
 --- !u!1 &2109128714
 GameObject:
   m_ObjectHideFlags: 0
@@ -2219,7 +2216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8932620886004838891, guid: 575e69bf0355d4620a0528cd45079ed6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.02
+      value: -1.78
       objectReference: {fileID: 0}
     - target: {fileID: 8932620886004838891, guid: 575e69bf0355d4620a0528cd45079ed6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2279,7 +2276,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8932620886004838893, guid: 575e69bf0355d4620a0528cd45079ed6, type: 3}
       propertyPath: m_Mass
-      value: 2.6982694
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8932620886004838893, guid: 575e69bf0355d4620a0528cd45079ed6, type: 3}
       propertyPath: m_Simulated
@@ -2291,7 +2288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8932620886004838893, guid: 575e69bf0355d4620a0528cd45079ed6, type: 3}
       propertyPath: m_UseAutoMass
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8932620886004838894, guid: 575e69bf0355d4620a0528cd45079ed6, type: 3}
       propertyPath: m_Name

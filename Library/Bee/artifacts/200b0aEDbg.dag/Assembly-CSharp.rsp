@@ -396,9 +396,9 @@
 "Assets/MeleeEnemy.cs"
 "Assets/NeoController.cs"
 "Assets/Playeranimation.cs"
-"Assets/PlayerController.cs"
 "Assets/Swordscript.cs"
 "Assets/Wagon.cs"
+"Assets/Wokringcontrol.cs"
 -langversion:9.0
 
 /deterministic
