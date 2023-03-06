@@ -20,9 +20,13 @@ public class Wokringcontrol : MonoBehaviour
     float horizontal;
     float vertical;
     bool ground;
+    bool mirror;
+
+    Animator anim;
     // Start is called before the first frame update
     void Start()
     {
+        anim = gameObject.GetComponent<Animator>();
         // =========== MOVEMENT ==============
         rigidbody2d = GetComponent<Rigidbody2D>();
     }
@@ -45,13 +49,22 @@ public class Wokringcontrol : MonoBehaviour
 
         }  
         
-        if(JumpMax <= Jumps);
+        if(Input.GetKeyDown(KeyCode.LeftArrow));
         {   
-         
+         mirror = true;
+        anim.SetTrigger("Run");
         }
 
+        if(Input.GetKeyDown(KeyCode.LeftArrow));
+        {   
+         mirror = true;
+          anim.SetTrigger("Run");
+        }
 
-
+       if(Input.GetKeyDown(KeyCode.LeftArrow)! && (Input.GetKeyDown(KeyCode.RightArrow)!));
+        {
+            anim.ResetTrigger("Run");
+        }
     }
  void FixedUpdate()
     {
