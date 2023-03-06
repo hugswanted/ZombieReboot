@@ -19,6 +19,7 @@ public class Wokringcontrol : MonoBehaviour
     
     float horizontal;
     float vertical;
+    bool ground;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,21 +37,17 @@ public class Wokringcontrol : MonoBehaviour
         Vector2 move = new Vector2(horizontal, vertical);
         currentInput = move;
 
-        if(Input.GetKeyDown(KeyCode.Space) & Jumps < JumpMax)
+        if(Input.GetKeyDown(KeyCode.Space) && ground == true)
         {
                 rigidbody2d.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
                 Debug.Log("jumps");
-
+                ground = false;
 
         }  
         
         if(JumpMax <= Jumps);
         {   
-        void OnCollisionEnter2D(Collision2D other);
-            {
-                if (other.gameObject.tag == "Hitbox");
-                Jumps == 0;
-            }
+         
         }
 
 
@@ -63,6 +60,12 @@ public class Wokringcontrol : MonoBehaviour
         rigidbody2d.velocity = new Vector2(horizontal * speed, rigidbody2d.velocity.y);
 
     }
-
+void OnCollisionEnter2D(Collision2D col)
+{ 
+ if(col.gameObject.CompareTag("Hitbox"))
+ {
+    ground = true;
+ }
+}
 
 }
