@@ -61,9 +61,15 @@ public class Wokringcontrol : MonoBehaviour
           anim.SetTrigger("Run");
         }
 
-       if(Input.GetKeyDown(KeyCode.LeftArrow)! && (Input.GetKeyDown(KeyCode.RightArrow)!));
-        {
+       if(Input.GetKeyUp(KeyCode.LeftArrow) && (Input.GetKeyUp(KeyCode.RightArrow)));
+        { 
             anim.ResetTrigger("Run");
+        }
+
+         if(Input.GetKeyDown(KeyCode.DownArrow));
+        {   
+         mirror = true;
+          anim.SetTrigger("Run");
         }
     }
  void FixedUpdate()
