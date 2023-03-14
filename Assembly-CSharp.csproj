@@ -36,14 +36,14 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets/MeleeEnemy.cs" />
+     <Compile Include="Assets/Scrips/MeleeEnemy.cs" />
      <Compile Include="Assets/NeoController.cs" />
      <Compile Include="Assets/animationscrpt.cs" />
-     <Compile Include="Assets/Cinema.cs" />
+     <Compile Include="Assets/Scrips/Cinema.cs" />
      <Compile Include="Assets/Swordscript.cs" />
      <Compile Include="Assets/Animationcontroller.cs" />
      <Compile Include="Assets/Playeranimation.cs" />
-     <Compile Include="Assets/Wokringcontrol.cs" />
+     <Compile Include="Assets/Scrips/Wokringcontrol.cs" />
      <Compile Include="Assets/anim.cs" />
      <Compile Include="Assets/knightcontroller.cs" />
      <Compile Include="Assets/Wagon.cs" />

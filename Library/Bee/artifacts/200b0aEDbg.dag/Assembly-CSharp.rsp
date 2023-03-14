@@ -391,14 +391,14 @@
 "Assets/anim.cs"
 "Assets/Animationcontroller.cs"
 "Assets/animationscrpt.cs"
-"Assets/Cinema.cs"
 "Assets/knightcontroller.cs"
-"Assets/MeleeEnemy.cs"
 "Assets/NeoController.cs"
 "Assets/Playeranimation.cs"
+"Assets/Scrips/Cinema.cs"
+"Assets/Scrips/MeleeEnemy.cs"
+"Assets/Scrips/Wokringcontrol.cs"
 "Assets/Swordscript.cs"
 "Assets/Wagon.cs"
-"Assets/Wokringcontrol.cs"
 -langversion:9.0
 
 /deterministic
