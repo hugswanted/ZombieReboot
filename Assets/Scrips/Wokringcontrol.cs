@@ -98,6 +98,14 @@ void OnCollisionEnter2D(Collision2D col)
     anim.ResetTrigger("Jump");
     anim.SetTrigger("Idle");
  }
+    if(col.gameObject.CompareTag("Hurtbox"))
+ {
+    anim.SetTrigger("Hurt");
+     Destroy(this.gameObject);
+ }  
+ 
 }
+
+
 
 }
