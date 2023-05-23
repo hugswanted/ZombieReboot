@@ -8,14 +8,14 @@ public class noobdelete : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-         timer += 1.0F * Time.deltaTime;
+         timer -= 1.0F * Time.deltaTime;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timer >= 100)
+        if (timer -= 10)
         {
  GameObject.Destroy(gameObject);
         }

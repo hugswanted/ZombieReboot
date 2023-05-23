@@ -17,6 +17,8 @@ public class knightcontroller : MonoBehaviour
     float invincibleTimer;
     
     Rigidbody2D rigidbody2d;
+
+    Vector2 curentInput;
     float horizontal;
     float vertical;
     
@@ -27,6 +29,7 @@ public class knightcontroller : MonoBehaviour
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        Vector2 
         
         currentHealth = maxHealth;
     }

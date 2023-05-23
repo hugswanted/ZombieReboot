@@ -41,14 +41,7 @@ public class Wokringcontrol : MonoBehaviour
         Vector2 move = new Vector2(horizontal, vertical);
         currentInput = move;
 
-        if(Input.GetKeyDown(KeyCode.Space) && ground == true)
-        {
-                rigidbody2d.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
-                Debug.Log("jumps");
-                anim.SetTrigger("Jump");
-                ground = false;
-
-        }  
+       `
         
         if(Input.GetKeyDown(KeyCode.LeftArrow) && ground == true)
         {   
@@ -101,7 +94,7 @@ void OnCollisionEnter2D(Collision2D col)
     if(col.gameObject.CompareTag("Hurtbox"))
  {
     anim.SetTrigger("Hurt");
-     Destroy(this.gameObject);
+    
  }  
  
 }
