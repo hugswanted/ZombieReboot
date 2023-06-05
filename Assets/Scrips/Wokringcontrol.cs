@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Wokringcontrol : MonoBehaviour
 {
+    public Transform Angel;
 
     // ========= MOVEMENT =================
     public float speed = 20;
@@ -40,9 +41,17 @@ public class Wokringcontrol : MonoBehaviour
                 
         Vector2 move = new Vector2(horizontal, vertical);
         currentInput = move;
+                
 
-       `
-        
+
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space) && ground == true)  //makes player jump
+        {
+            Debug.Log("Jump");
+            rigidbody2d.AddForce(Vector2.up * 5000, ForceMode2D.Force);
+            rigidbody2d.MovePosition(rigidbody2d.position);
+            ground = false ;
+        }
+
         if(Input.GetKeyDown(KeyCode.LeftArrow) && ground == true)
         {   
          mirror = true;
@@ -51,7 +60,7 @@ public class Wokringcontrol : MonoBehaviour
         Debug.Log("left");
         }
 
-       if(Input.GetKeyUp(KeyCode.LeftArrow) || (Input.GetKeyUp(KeyCode.RightArrow))  && ground == true)
+       if(Input.GetKeyUp(KeyCode.LeftArrow) || (Input.GetKeyUp(KeyCode.RightArrow)) && ground == true)
         { 
             anim.ResetTrigger("Run");
             anim.SetTrigger("Idle");
@@ -90,11 +99,12 @@ void OnCollisionEnter2D(Collision2D col)
     ground = true;
     anim.ResetTrigger("Jump");
     anim.SetTrigger("Idle");
+    Jumps = 1;
  }
     if(col.gameObject.CompareTag("Hurtbox"))
  {
     anim.SetTrigger("Hurt");
-    
+   this.transform.position = new Vector3(Angel.position.x, Angel.position.y, Angel.position.z);
  }  
  
 }
