@@ -144,12 +144,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8932620886004838894}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b952196d1da82499d96170b873c07476, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b3886762071344c6ba52075c14187ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: {x: 10, y: 0}
-  jumpHeight: {x: 0, y: 10}
-  DashSpeed: {x: 10, y: 0}
+  speed: 20
+  Jumps: 0
+  JumpMax: 1
 --- !u!95 &3884075634394944974
 Animator:
   serializedVersion: 4
